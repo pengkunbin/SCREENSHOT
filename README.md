@@ -1,5 +1,5 @@
 # screenshot
-****
+
 Capture screenshots using [puppeteer](https://developers.google.com/web/tools/puppeteer/get-started).
 
 ## Installation
@@ -12,7 +12,7 @@ npm install
 ```
 
 ## Example
-****
+
 Capture a screenshot of ghub.io(Terminal):
 ```
 // Image path is absolute path
