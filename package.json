@@ -1,0 +1,12 @@
+{
+  "name": "screenshot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "jizou",
+  "license": "ISC",
+  "devDependencies": {
+    "puppeteer": "^5.5.0"
+  }
+}
