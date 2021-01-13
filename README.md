@@ -16,6 +16,7 @@ npm install
 Capture a screenshot of ghub.io(Terminal):
 ```
 cd SCREENSHOT
+
 // Image path is absolute path
 node index.js https://github.com/ github.png
 ```
