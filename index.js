@@ -25,19 +25,16 @@ if (!url || !imgPath) {
   });
 
   await autoScroll(page);
-
   await page.screenshot({
     path: imgPath,
     fullPage: true,
   });
-
   await browser.close();
 })();
 
 // 滚动截屏函数，解决动态高度问题
-const autoScroll = function (page) {
+const autoScroll = async function (page) {
   return page.evaluate(() => {
-    return new Promise((resolve) => {
       const totalHeight = 0;
       const distance = 100;
       const timer = setInterval(() => {
@@ -46,9 +43,8 @@ const autoScroll = function (page) {
         totalHeight += distance;
         if (totalHeight >= scrollHeight) {
           clearInterval(timer);
-          resolve();
+          return
         }
       }, 100);
     });
-  });
 };
