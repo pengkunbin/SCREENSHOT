@@ -7,8 +7,8 @@ const url = args[0];
 const imgPath = args[1];
 
 // 如果有某一值为空
-if(!url || !imgPath){
-    throw('command line params error')
+if (!url || !imgPath) {
+  throw "command line params error";
 }
 
 // 自动执行——截屏主函数
@@ -36,11 +36,11 @@ if(!url || !imgPath){
 // 滚动截屏函数，解决动态高度问题
 const autoScroll = function (page) {
   return page.evaluate(() => {
-    return new Promise((resolve, reject) => {
-      var totalHeight = 0;
-      var distance = 100;
-      var timer = setInterval(() => {
-        var scrollHeight = document.body.scrollHeight;
+    return new Promise((resolve) => {
+      const totalHeight = 0;
+      const distance = 100;
+      const timer = setInterval(() => {
+        const scrollHeight = document.body.scrollHeight;
         window.scrollBy(0, distance);
         totalHeight += distance;
         if (totalHeight >= scrollHeight) {
