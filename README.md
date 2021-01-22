@@ -19,4 +19,7 @@ cd SCREENSHOT
 
 // Image path is absolute path
 node index.js https://github.com/ github.png
+
+// add delay timer(ms)
+node index.js https://github.com/ github.png 3000
 ```
